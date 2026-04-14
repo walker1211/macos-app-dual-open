@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "codesign $*" >> "${APP_DUAL_LOG_FILE:?}"

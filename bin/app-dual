@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT_DIR=$(cd "$(dirname "$0")/.." && pwd)
+# shellcheck source=lib/common.sh
+source "$ROOT_DIR/lib/common.sh"
+# shellcheck source=lib/clone.sh
+source "$ROOT_DIR/lib/clone.sh"
+# shellcheck source=lib/launch.sh
+source "$ROOT_DIR/lib/launch.sh"
+# shellcheck source=lib/update.sh
+source "$ROOT_DIR/lib/update.sh"
+# shellcheck source=lib/remove.sh
+source "$ROOT_DIR/lib/remove.sh"
+
+usage() {
+  cat <<'EOF'
+Usage:
+  app-dual clone <app-path>
+  app-dual launch <app-path>
+  app-dual update <app-path>
+  app-dual remove <app-path>
+EOF
+}
+
+main() {
+  local command=${1:-}
+  case "$command" in
+    clone)
+      shift
+      [[ $# -eq 1 ]] || die "clone requires exactly one <app-path> argument"
+      clone_app "$1"
+      log_info "Created secondary app: $(secondary_app_path "$1")"
+      ;;
+    launch)
+      shift
+      [[ $# -eq 1 ]] || die "launch requires exactly one <app-path> argument"
+      launch_app "$1"
+      ;;
+    update)
+      shift
+      [[ $# -eq 1 ]] || die "update requires exactly one <app-path> argument"
+      update_app "$1"
+      ;;
+    remove)
+      shift
+      [[ $# -eq 1 ]] || die "remove requires exactly one <app-path> argument"
+      remove_app "$1"
+      ;;
+    ''|-h|--help|help)
+      usage
+      ;;
+    *)
+      die "Unknown command: $command"
+      ;;
+  esac
+}
+
+main "$@"

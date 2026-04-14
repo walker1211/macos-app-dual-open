@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "cp $*" >> "${APP_DUAL_LOG_FILE:?}"
+/bin/cp "$@"

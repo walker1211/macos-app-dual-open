@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "PlistBuddy $*" >> "${APP_DUAL_LOG_FILE:?}"
+
+if [[ "$1" == "-c" && "$2" == "Print :CFBundleIdentifier" ]]; then
+  python3 - <<'PY' "$3"
+import plistlib, sys
+with open(sys.argv[1], 'rb') as f:
+    data = plistlib.load(f)
+print(data['CFBundleIdentifier'])
+PY
+  exit 0
+fi
+
+if [[ "$1" == "-c" && "$2" == Set\ :CFBundleIdentifier* ]]; then
+  value=${2#Set :CFBundleIdentifier }
+  python3 - <<'PY' "$3" "$value"
+import plistlib, sys
+path, value = sys.argv[1], sys.argv[2]
+with open(path, 'rb') as f:
+    data = plistlib.load(f)
+data['CFBundleIdentifier'] = value
+with open(path, 'wb') as f:
+    plistlib.dump(data, f)
+PY
+  exit 0
+fi
+
+echo "unsupported PlistBuddy invocation: $*" >&2
+exit 1

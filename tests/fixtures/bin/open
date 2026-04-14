@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "open $*" >> "${APP_DUAL_LOG_FILE:?}"
