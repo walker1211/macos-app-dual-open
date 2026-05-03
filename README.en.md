@@ -105,7 +105,7 @@ sudo bin/app-dual remove "/Applications/WeChat.app"
 
 - `clone` creates a new secondary app copy
 - `launch` behaves similarly to manually opening `WeChat-secondary.app`
-- `update` prints only the `Updated` success message and does not duplicate the `Created` message
+- `update` rebuilds the secondary app by removing the old secondary app (if it exists) and recreating it
 - `remove` deletes only the copied app bundle and does not affect the source app
 
 ## Safety Boundaries

@@ -2,7 +2,9 @@
 
 A small Bash CLI for creating and managing `secondary` copies of macOS apps.
 
-[中文文档](./README.zh-CN.md) | [English Documentation](./README.en.md)
+## Documentation
+
+[中文](./README.zh-CN.md) | [English](./README.en.md)
 
 ## Quick Start
 
@@ -12,11 +14,6 @@ bin/app-dual launch "/Applications/WeChat.app"
 bin/app-dual update "/Applications/WeChat.app"
 bin/app-dual remove "/Applications/WeChat.app"
 ```
-
-## Full Documentation
-
-- [中文完整文档](./README.zh-CN.md)
-- [English full documentation](./README.en.md)
 
 ## License
 

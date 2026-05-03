@@ -105,7 +105,7 @@ sudo bin/app-dual remove "/Applications/WeChat.app"
 
 - `clone` 会创建一个新的 secondary app 副本
 - `launch` 的效果接近于手动打开 `WeChat-secondary.app`
-- `update` 只输出 `Updated` 成功日志，不重复输出 `Created`
+- `update` 会重建副本：先尝试删除旧 secondary app（如果存在），再重新 clone
 - `remove` 只删除副本 app，不影响原始 app
 
 ## 安全边界
