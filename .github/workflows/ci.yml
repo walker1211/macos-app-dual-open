@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Check bash syntax
+        run: |
+          bash -n bin/app-dual
+          bash -n lib/*.sh
+          bash -n tests/*.sh
+
+      - name: Run tests
+        run: bash tests/run.sh
