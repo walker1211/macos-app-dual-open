@@ -1,0 +1,51 @@
+name: Feature request
+description: Suggest an improvement or new capability for macos-app-dual-open
+title: "feat: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement. Please avoid including secrets, private local application paths, private app bundle paths, logs, screenshots, shell output, temporary files, or generated local artifacts.
+
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Use case
+      description: What are you trying to accomplish? Describe the app-opening workflow or problem in practical terms.
+      placeholder: "When using macos-app-dual-open to manage a secondary app copy, I need ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-capability
+    attributes:
+      label: Desired capability
+      description: What should macos-app-dual-open be able to do?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What workarounds, existing commands, or other tools have you tried?
+    validations:
+      required: false
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints and compatibility
+      description: Mention relevant constraints such as macOS version, shell compatibility, app bundle behavior, code signing, permissions, or safety boundaries.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add examples, links, or screenshots if helpful. Redact sensitive information.
+    validations:
+      required: false

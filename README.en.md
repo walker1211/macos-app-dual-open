@@ -132,6 +132,10 @@ Current automated coverage includes:
 - `update` / `remove` behavior
 - the safety guarantee that the source app is not modified
 
+## Contributing and Security
+
+See [CONTRIBUTING](./CONTRIBUTING.md) for contribution guidelines and [SECURITY](./SECURITY.md) for vulnerability reporting.
+
 ## License
 
 See [LICENSE](./LICENSE).

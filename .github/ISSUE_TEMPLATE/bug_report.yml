@@ -1,0 +1,85 @@
+name: Bug report
+description: Report a reproducible problem in macos-app-dual-open
+title: "bug: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Before submitting, remove secrets, private local application paths, private app bundle paths, logs, screenshots, shell output, temporary files, and other sensitive local data.
+
+  - type: input
+    id: version
+    attributes:
+      label: macos-app-dual-open version
+      description: Release version, commit SHA, or local branch if available.
+      placeholder: "v0.1.0, commit abc1234, or local main"
+    validations:
+      required: true
+
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version
+      description: Include the macOS version and hardware architecture if relevant.
+      placeholder: "macOS 15.4 on Apple Silicon, macOS 14 on Intel, etc."
+    validations:
+      required: true
+
+  - type: textarea
+    id: command-workflow
+    attributes:
+      label: Command or workflow
+      description: Paste the command or workflow that triggers the problem. Redact private paths and app names if needed.
+      placeholder: |
+        bin/app-dual clone "/Applications/Example.app"
+        bin/app-dual launch "/Applications/Example.app"
+      render: bash
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Provide the smallest set of steps that reproduces the issue.
+      placeholder: |
+        1. Start with ...
+        2. Run ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized logs or error output
+      description: Paste only relevant snippets. Redact secrets, account names, private paths, private app bundle paths, screenshots, and unrelated shell output.
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add any other context that may help diagnose the issue. Redact sensitive information.
+    validations:
+      required: false

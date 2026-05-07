@@ -132,6 +132,10 @@ bash tests/run.sh
 - `update` / `remove` 行为
 - “不修改原始 app”的安全边界
 
+## 贡献与安全
+
+贡献指南见 [CONTRIBUTING](./CONTRIBUTING.md)，漏洞报告方式见 [SECURITY](./SECURITY.md)。
+
 ## License
 
 详见 [LICENSE](./LICENSE)。

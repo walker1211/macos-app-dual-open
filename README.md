@@ -15,6 +15,10 @@ bin/app-dual update "/Applications/WeChat.app"
 bin/app-dual remove "/Applications/WeChat.app"
 ```
 
+## Contributing and Security
+
+See [CONTRIBUTING](./CONTRIBUTING.md) for contribution guidelines and [SECURITY](./SECURITY.md) for vulnerability reporting.
+
 ## License
 
 See [LICENSE](./LICENSE).
