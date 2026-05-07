@@ -1,12 +1,12 @@
 ## Summary
 
-* 
+*
 
 ## Test plan
 
 * [ ] `bash -n ./bin/app-dual ./lib/*.sh`
 * [ ] `bash ./tests/run.sh`
-* [ ] Other manual checks, if applicable: 
+* [ ] Other manual checks, if applicable:
 
 ## Checklist
 
