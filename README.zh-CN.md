@@ -1,8 +1,10 @@
+[English](./README.md)
+
 # macos-app-dual-open
 
 一个用于创建和管理 macOS 应用 `secondary` 副本的小型 Bash CLI。
 
-[Landing Page](./README.md) | [English](./README.en.md)
+[English](./README.md)
 
 ## 功能概览
 
