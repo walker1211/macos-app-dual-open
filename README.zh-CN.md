@@ -4,8 +4,6 @@
 
 一个用于创建和管理 macOS 应用 `secondary` 副本的小型 Bash CLI。
 
-[English](./README.md)
-
 ## 功能概览
 
 - 基于原始 `.app` 创建 `-secondary.app` 副本
