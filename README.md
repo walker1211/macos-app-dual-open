@@ -4,8 +4,6 @@
 
 A small Bash CLI for creating and managing `secondary` copies of macOS apps.
 
-[Landing Page](./README.md) | [中文](./README.zh-CN.md)
-
 ## Features
 
 - Create a `-secondary.app` copy from an original `.app`
